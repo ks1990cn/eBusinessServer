@@ -1,4 +1,4 @@
-namespace BackendForFrontendAPI
+namespace CartBFFAPI
 {
     public class WeatherForecast
     {

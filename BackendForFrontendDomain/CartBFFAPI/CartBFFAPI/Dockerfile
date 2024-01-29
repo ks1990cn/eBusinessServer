@@ -9,17 +9,17 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["BackendForFrontendAPI/BackendForFrontendAPI.csproj", "BackendForFrontendAPI/"]
-RUN dotnet restore "./BackendForFrontendAPI/BackendForFrontendAPI.csproj"
+COPY ["CartBFFAPI/CartBFFAPI.csproj", "CartBFFAPI/"]
+RUN dotnet restore "./CartBFFAPI/CartBFFAPI.csproj"
 COPY . .
-WORKDIR "/src/BackendForFrontendAPI"
-RUN dotnet build "./BackendForFrontendAPI.csproj" -c $BUILD_CONFIGURATION -o /app/build
+WORKDIR "/src/CartBFFAPI"
+RUN dotnet build "./CartBFFAPI.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./BackendForFrontendAPI.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./CartBFFAPI.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "BackendForFrontendAPI.dll"]
+ENTRYPOINT ["dotnet", "CartBFFAPI.dll"]

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34518.117
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackendForFrontendAPI", "BackendForFrontendAPI\BackendForFrontendAPI.csproj", "{B6DC70AC-71B3-479D-BC20-1A4213D2D70E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartBFFAPI", "CartBFFAPI\CartBFFAPI.csproj", "{685E284A-317F-4A7A-B21A-829BCA76DC27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B6DC70AC-71B3-479D-BC20-1A4213D2D70E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B6DC70AC-71B3-479D-BC20-1A4213D2D70E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B6DC70AC-71B3-479D-BC20-1A4213D2D70E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B6DC70AC-71B3-479D-BC20-1A4213D2D70E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{685E284A-317F-4A7A-B21A-829BCA76DC27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{685E284A-317F-4A7A-B21A-829BCA76DC27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{685E284A-317F-4A7A-B21A-829BCA76DC27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{685E284A-317F-4A7A-B21A-829BCA76DC27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {84E8EDEC-111E-4FCF-820F-3ABF65BADA66}
+		SolutionGuid = {3E0E3C81-F391-4BF1-A8EE-441E7FE4B1FD}
 	EndGlobalSection
 EndGlobal

@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <InvariantGlobalization>true</InvariantGlobalization>
-    <UserSecretsId>c1ed2c79-89a2-4ddd-8cba-b72ad32ac5a3</UserSecretsId>
+    <UserSecretsId>376ef4a0-1207-4c25-81c1-114e812064f6</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 

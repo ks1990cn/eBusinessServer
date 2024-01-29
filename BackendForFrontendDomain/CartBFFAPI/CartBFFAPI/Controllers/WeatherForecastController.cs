@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace BackendForFrontendAPI.Controllers
+namespace CartBFFAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
