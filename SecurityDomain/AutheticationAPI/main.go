@@ -119,9 +119,22 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Check if authentication was successful
 	if authResp.AuthenticationResult != nil {
-		// Authentication successful, return JWT token or any other response
-		fmt.Fprintf(w, "Authentication successful!\n")
-		fmt.Fprintf(w, "JWT Token: %s\n", *authResp.AuthenticationResult.IdToken)
+		// Authentication successful, return JWT token
+		w.WriteHeader(http.StatusOK)
+		response := struct {
+			Message  string `json:"message"`
+			JWTToken string `json:"jwt_token"`
+		}{
+			Message:  "Authentication successful",
+			JWTToken: *authResp.AuthenticationResult.IdToken,
+		}
+		jsonResponse, err := json.Marshal(response)
+		if err != nil {
+			http.Error(w, "Error marshalling JSON response", http.StatusInternalServerError)
+			return
+		}
+		w.Header().Set("Content-Type", "application/json")
+		w.Write(jsonResponse)
 	} else {
 		// Check if a new password is required
 		if authResp.ChallengeName != nil && *authResp.ChallengeName == "NEW_PASSWORD_REQUIRED" {
