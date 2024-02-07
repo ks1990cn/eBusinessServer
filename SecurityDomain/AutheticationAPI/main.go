@@ -151,7 +151,7 @@ func updatePasswordHandler(w http.ResponseWriter, r *http.Request) {
 	// Decode request body
 	var requestBody struct {
 		Username string `json:"username"`
-		Password string `json:"password"`
+		Password string `json:"newPassword"`
 	}
 	body, err := io.ReadAll(r.Body)
 	if err != nil {
@@ -174,7 +174,6 @@ func updatePasswordHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	// Create a Cognito Identity Provider client
 	svc := cognitoidentityprovider.New(sess)
-	requestBody.Password = "12345678"
 	// Parameters for updating the user's password
 	input := &cognitoidentityprovider.AdminSetUserPasswordInput{
 		UserPoolId: aws.String(userPoolId), // Replace with your actual Cognito user pool ID
