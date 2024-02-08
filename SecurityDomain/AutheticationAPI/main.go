@@ -15,6 +15,7 @@ type LoginRequest struct {
 
 func main() {
 	http.HandleFunc("/login", loginHandler)
+	http.HandleFunc("/logout", logoutHandler)
 	http.HandleFunc("/updatepassword", updatePasswordHandler)
 	http.ListenAndServe(":8080", addCorsHeaders(http.DefaultServeMux)) // Add CORS middleware
 }
