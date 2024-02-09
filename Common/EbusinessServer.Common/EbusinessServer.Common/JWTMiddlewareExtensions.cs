@@ -4,7 +4,7 @@ namespace EbusinessServer.Common
 {
     public static class JWTMiddlewareExtensions
     {
-        public static IApplicationBuilder UseDownstreamRouteFinderMiddleware(this IApplicationBuilder builder)
+        public static IApplicationBuilder UseJWTMiddleware(this IApplicationBuilder builder)
         {
             return builder.UseMiddleware<JWTMiddleware>();
         }
