@@ -1,9 +1,8 @@
 ﻿using Amazon;
 using Amazon.SQS;
 using Amazon.SQS.Model;
-using ShoppingCartAPI.Common;
 using System.Text.Json;
-
+using EbusinessServer.Common;
 namespace ShoppingCartAPI.SNS
 {
     public class SqsPublisher : ISqsPublisher

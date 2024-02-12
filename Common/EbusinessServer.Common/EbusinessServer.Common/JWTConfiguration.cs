@@ -6,7 +6,7 @@ namespace EbusinessServer.Common
 {
     public static class JWTConfiguration
     {
-        static async Task CreateJWTConfigurationAsync(WebApplicationBuilder builder)
+        public static async Task CreateJWTConfigurationAsync(WebApplicationBuilder builder)
         {
             string clientId = await ParameterHelper.GetParameterAsync("clientIdUserPool");
             string region = await ParameterHelper.GetParameterAsync("region");
