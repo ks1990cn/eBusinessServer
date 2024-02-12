@@ -76,7 +76,7 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 		response := struct {
 			Message  string `json:"message"`
 			JWTToken string `json:"jwt_token"`
-			IdToken  string `json:"jwt_token"`
+			IdToken  string `json:"id_token"`
 		}{
 			Message:  "Authentication successful",
 			JWTToken: *authResp.AuthenticationResult.AccessToken,
