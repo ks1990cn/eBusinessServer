@@ -16,10 +16,16 @@ namespace EbusinessServer.Common
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(options =>
+            }).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme,options =>
             {
                 options.Authority = $"https://cognito-idp.{region}.amazonaws.com/{userPoolId}";
-                options.Audience = clientId;
+                options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                {
+                    ValidateLifetime = true,
+                    ValidateAudience = true,
+                    ValidAudience = clientId
+
+                };
             });
         }
     }
