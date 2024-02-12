@@ -11,6 +11,7 @@ namespace EbusinessServer.Common
             string clientId = await ParameterHelper.GetParameterAsync("clientIdUserPool");
             string region = await ParameterHelper.GetParameterAsync("region");
             string userPoolId = await ParameterHelper.GetParameterAsync("userPoolId");
+            builder.Services.AddTransient<JWTMiddleware>();
             builder.Services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
