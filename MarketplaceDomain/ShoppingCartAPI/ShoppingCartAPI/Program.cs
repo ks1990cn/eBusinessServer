@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<ISqsPublisher, SqsPublisher>();
-
+await JWTConfiguration.CreateJWTConfigurationAsync(builder);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
