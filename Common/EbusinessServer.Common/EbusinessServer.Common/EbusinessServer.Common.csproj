@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <Title>Common Extensions &amp; Helpers for EBusinessServer - .Net</Title>
     <RepositoryUrl>https://github.com/ks1990cn/eBusinessServer/tree/main/Common/EbusinessServer.Common</RepositoryUrl>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>

@@ -12,7 +12,7 @@
   <ItemGroup>
     <PackageReference Include="AWSSDK.SimpleNotificationService" Version="3.7.300.41" />
     <PackageReference Include="AWSSDK.SQS" Version="3.7.300.41" />
-    <PackageReference Include="EbusinessServer.Common" Version="1.0.1" />
+    <PackageReference Include="EbusinessServer.Common" Version="1.0.2" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
