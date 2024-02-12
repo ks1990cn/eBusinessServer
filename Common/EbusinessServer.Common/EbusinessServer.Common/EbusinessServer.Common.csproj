@@ -4,6 +4,8 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Title>Common Extensions &amp; Helpers for EBusinessServer - .Net</Title>
+    <RepositoryUrl>https://github.com/ks1990cn/eBusinessServer/tree/main/Common/EbusinessServer.Common</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
