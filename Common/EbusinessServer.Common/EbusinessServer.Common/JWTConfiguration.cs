@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 
 namespace EbusinessServer.Common
 {
@@ -19,12 +20,15 @@ namespace EbusinessServer.Common
             }).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme,options =>
             {
                 options.Authority = $"https://cognito-idp.{region}.amazonaws.com/{userPoolId}";
-                options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                options.Audience = clientId;
+                options.TokenValidationParameters = new TokenValidationParameters
                 {
-                    ValidateLifetime = true,
+                    ValidateIssuer = true,
                     ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = $"https://cognito-idp.{region}.amazonaws.com/{userPoolId}",
                     ValidAudience = clientId
-
                 };
             });
         }
