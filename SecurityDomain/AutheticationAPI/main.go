@@ -17,6 +17,7 @@ func main() {
 	http.HandleFunc("/login", loginHandler)
 	http.HandleFunc("/logout", logoutHandler)
 	http.HandleFunc("/updatepassword", updatePasswordHandler)
+	http.HandleFunc("/TokenValidation", TokenValidation)
 	http.ListenAndServe(":8080", addCorsHeaders(http.DefaultServeMux)) // Add CORS middleware
 }
 
